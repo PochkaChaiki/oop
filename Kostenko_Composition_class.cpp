@@ -5,6 +5,11 @@
 #include <vector>
 #include "utils.h"
 
+Kostenko_Composition::~Kostenko_Composition(){
+    for(auto& it : characters)
+        delete it;
+}
+
 void Kostenko_Composition::AddNewCharacter(std::istream& in){
     Kostenko_Character* character = new Kostenko_Character;
     in >> *character;
