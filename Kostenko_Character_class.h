@@ -11,10 +11,10 @@ public:
     ~Kostenko_Character();
 
     friend std::ostream& operator<< (std::ostream& out, const Kostenko_Character& character);
-    friend std::istream& operator>> (std::istream& in, const Kostenko_Character& character);
+    friend std::istream& operator>> (std::istream& in, Kostenko_Character& character);
 
-    friend std::ifstream& operator>> (std::ifstream& in, const Kostenko_Character& character);
-    friend std::ofstream& operator<< (std::ifstream& out, const Kostenko_Character& character);
+    friend std::ifstream& operator>> (std::ifstream& in, Kostenko_Character& character);
+    friend std::ofstream& operator<< (std::ofstream& out, const Kostenko_Character& character);
 
 
 
