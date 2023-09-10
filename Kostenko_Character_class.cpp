@@ -4,6 +4,7 @@
 #include <float.h>
 #include "utils.h"
 
+
 std::ostream& operator<< (std::ostream& out, const Kostenko_Character& character){
     out << "Name: " << character.name;
     out << "\nSurname: " << character.surname;

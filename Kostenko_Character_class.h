@@ -1,5 +1,5 @@
-#ifndef __KOSTENKO_CLASS__
-#define __KOSTENKO_CLASS__
+#ifndef __KOSTENKO_CHARACTER_CLASS__
+#define __KOSTENKO_CHARACTER_CLASS__
 
 #include <iostream>
 #include <string>
@@ -8,7 +8,7 @@
 class Kostenko_Character {
 public:
     Kostenko_Character();
-    ~Kostenko_Character();
+    ~Kostenko_Character() = default;
 
     friend std::ostream& operator<< (std::ostream& out, const Kostenko_Character& character);
     friend std::istream& operator>> (std::istream& in, Kostenko_Character& character);
