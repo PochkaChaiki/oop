@@ -55,5 +55,8 @@
         "xutility": "cpp",
         "fstream": "cpp",
         "vector": "cpp"
+    },
+    "files.exclude": {
+        "**/.git": false
     }
 }

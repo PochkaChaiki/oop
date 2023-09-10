@@ -8,10 +8,15 @@
 
 class Kostenko_Composition{
 public:
-    Kostenko_Composition();
+
     ~Kostenko_Composition();
 
-    void AddNewCharacter(std::istream& in);
+    template<typename T>
+    void AddNewCharacter(T& in){
+        Kostenko_Character* character = new Kostenko_Character;
+        in >> *character;
+        characters.push_back(character);
+    }
     void PrintCharacters();
     void ClearCharacters();
 
@@ -21,8 +26,6 @@ public:
 private:
     std::vector<Kostenko_Character*> characters;
 };
-
-
 
 
 #endif

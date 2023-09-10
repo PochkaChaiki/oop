@@ -12,17 +12,20 @@ int main(){
     Kostenko_Composition Composition;
     while (option){
         printMenu();
+        std::cin >> option;
         switch(option){
             case 0: return 0;
-            case 1:
+            case 1:{
+                std::cout <<"\n#---------------------------------#\n";
                 Composition.AddNewCharacter(std::cin);
-                break;
+            } break;
             case 2:
                 Composition.PrintCharacters();
                 break;
             case 3:{
                 std::string filename;
                 std::cout << "Enter filename: ";
+                std::getline(std::cin, filename);
                 std::getline(std::cin, filename);
                 std::ifstream file (filename, std::ifstream::in);
                 file >> Composition;
@@ -31,6 +34,7 @@ int main(){
             case 4:{
                 std::string filename;
                 std::cout << "Enter filename: ";
+                std::getline(std::cin, filename);
                 std::getline(std::cin, filename);
                 std::ofstream file (filename, std::ofstream::out);
                 file << Composition;
@@ -46,11 +50,11 @@ int main(){
 }
 
 void printMenu(){
-    std::cout << "\n\tMENU:\n";
-    std::cout << "\t 0 - Exit program.\n";
-    std::cout << "\t 1 - Add new character.\n";
-    std::cout << "\t 2 - Show all characters.\n";
-    std::cout << "\t 3 - Load characters from file.\n";
-    std::cout << "\t 4 - Save characters to file.\n";
-    std::cout << "\t 5 - Clear all characters.\n";
+    std::cout << "/====/MENU:/====/\n";
+    std::cout << "\t0 - Exit program.\n";
+    std::cout << "\t1 - Add new character.\n";
+    std::cout << "\t2 - Show all characters.\n";
+    std::cout << "\t3 - Load characters from file.\n";
+    std::cout << "\t4 - Save characters to file.\n";
+    std::cout << "\t5 - Clear all characters.\n";
 }

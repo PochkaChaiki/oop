@@ -7,7 +7,7 @@
 
 class Kostenko_Character {
 public:
-    Kostenko_Character();
+    
     ~Kostenko_Character() = default;
 
     friend std::ostream& operator<< (std::ostream& out, const Kostenko_Character& character);

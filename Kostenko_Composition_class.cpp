@@ -10,16 +10,12 @@ Kostenko_Composition::~Kostenko_Composition(){
         delete it;
 }
 
-void Kostenko_Composition::AddNewCharacter(std::istream& in){
-    Kostenko_Character* character = new Kostenko_Character;
-    in >> *character;
-    characters.push_back(character);
-}
-
 void Kostenko_Composition::PrintCharacters(){
+    std::cout <<"\n#---------------------------------#\n";
     std::cout << "Characters in composition: \n";
+    std::cout << "#- - - - - - - - - - - - - - - - - #\n";
     for (auto& ptr_character: characters)
-        std::cout << *ptr_character << "\n#---------------------------------#\n";
+        std::cout << *ptr_character << "\n#- - - - - - - - - - - - - - - - - #\n";
 }
 
 void Kostenko_Composition::ClearCharacters(){
